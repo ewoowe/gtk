@@ -77,8 +77,10 @@ gdk_public_headers = files(
   'gdkvisual.h',
   'gdkwindow.h',
 )
+install_headers(gdk_public_headers, subdir : 'gtk-3.0/gdk')
 
 deprecated_h_sources = files('deprecated/gdkcolor.h')
+install_headers(deprecated_h_sources, subdir : 'gtk-3.0/gdk/deprecated')
 
 # This variable is unused, but added just for completeness
 gdk_private_headers = files(
